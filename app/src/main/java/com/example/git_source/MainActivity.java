@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.git_source.databinding.ActivityMainBinding;
 
@@ -22,6 +23,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void click(){
-        binding.textResult.setText("Click button");
+        binding.btnClick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                try {
+                    Thread.sleep(3000);
+                    binding.textResult.setText("Update");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 }

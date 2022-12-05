@@ -22,8 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Button"
-        app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="@+id/text_result"
+        app:layout_constraintStart_toStartOf="@+id/text_result"
+        app:layout_constraintTop_toBottomOf="@+id/text_result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

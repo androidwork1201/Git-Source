@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
 
         click();
+        restart();
     }
 
     private void click(){
@@ -30,9 +31,20 @@ public class MainActivity extends AppCompatActivity {
                     Thread.sleep(3000);
                     binding.textResult.setText("Update");
                     binding.btnClick.setVisibility(View.INVISIBLE);
+                    binding.btnRestart.setVisibility(View.VISIBLE);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+    }
+    private void restart(){
+        binding.btnRestart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                binding.btnRestart.setVisibility(View.INVISIBLE);
+                binding.textResult.setText("Develop");
+                binding.btnClick.setVisibility(View.VISIBLE);
             }
         });
     }

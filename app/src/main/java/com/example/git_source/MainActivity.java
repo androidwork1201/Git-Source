@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     Thread.sleep(3000);
                     binding.textResult.setText("Update");
+                    binding.btnClick.setVisibility(View.INVISIBLE);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
